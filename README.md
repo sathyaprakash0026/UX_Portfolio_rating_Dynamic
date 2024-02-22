@@ -1,4 +1,5 @@
 # UX Design portfolio Project with feedback and rating the candidates
+# Note : This Code is return fully on HtML and the functionality and reuseable HTML Components are written inside the Java Script Files
 ### Responsive Mobile,PC,Tablet
 
 # Demo Link: https://main--phenomenal-banoffee-8a8852.netlify.app/
