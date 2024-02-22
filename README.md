@@ -30,7 +30,7 @@ you can view their file and asses their portfolio
 # This is were you can give Ratings and Feedback Regarding the portfolio
 ![alt text](image-2.png)
 
-# View their Results based on ratings and feedback that you give
+# View their Results based on ratings and feedback that you gave
 ![alt text](image-3.png)
 
 
