@@ -302,7 +302,7 @@ sectionContainers.forEach(section => {
       allResponses.push(response);
       resultCard.classList.add("show-card");
       section.classList.add("hide-card");
-      resultText.textContent = `Hi ${name}, you selected ${wasSelected.textContent} out of 5`;
+      resultText.textContent = `${wasSelected.textContent} out of 5`;
       // console.log("All Responses:", allResponses);
       generateChart();
 
