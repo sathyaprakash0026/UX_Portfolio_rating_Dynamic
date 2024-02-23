@@ -12,6 +12,8 @@ const applicants = [
     css: "85%",
     js: "65%",
     imagesrc2: "assets/img/gloria-2.png",
+    text3:"The viewer should know exactly who you are and what you do within seconds of landing on your UX design portfolio. Craft a compelling headline that provides all the most important information at a glance",
+   imagesrc3:"assets/img/gloria-4.png",
     link: "https://www.glorialo.design/",
   },
 
@@ -27,6 +29,8 @@ const applicants = [
     css: "89%",
     js: "60%",
     imagesrc2: "assets/img/moritz1.jpg",
+    text3:"Showcase your process, not just the finished product. Write about the methods you used, what you learned along the way, the challenges you came up against, and how you solved certain problems. Each case study should tell a complete, logical story.",
+    imagesrc3:"assets/img/moritz2.png",
     link: "https://www.moritzoesterlau.de/",
   },
   {
@@ -41,6 +45,8 @@ const applicants = [
     css: "89%",
     js: "60%",
     imagesrc2: "assets/img/elizabeth2.jpg",
+    text3:"Don’t just tell the story of each project; bring it to life with visual artifacts. For each step you go through in your case study, include a photo or screenshot of how it looked in action.",
+    imagesrc3:"assets/img/elizabeth3.png",
     link: "https://www.elizabethylin.com/",
   },
   {
@@ -54,6 +60,8 @@ const applicants = [
     html: "93%",
     css: "82%",
     js: "68%",
+    text3:"Your UX design portfolio should demonstrate your approach to problem-solving. Kick off each case study by framing the problem in detail, using emotive language to convey empathy. Refer back to the problem throughout.",
+    imagesrc3:"assets/img/olivia-3.png",
     imagesrc2: "assets/img/olivia-2.jpg",
     link: "https://www.oliviatruong.design/",
   },
@@ -68,36 +76,27 @@ const applicants = [
     html: "95%",
     css: "83%",
     js: "75",
+    text3:"Unsolicited redesigns are an excellent way to build up your UX portfolio and demonstrate your initiative as a designer. As always, frame the problem, document your process, and tell a good story—and don’t forget to include a disclaimer.",
+    imagesrc3:"assets/img/priyanka-3.png",
     imagesrc2: "assets/img/priyanka-2.jpg",
     link: "https://priyanka.io/",
   },
 
-  // {
-  //   applicant: "applicants6",
-  //   applicanttitle: "Applicant 6",
-  //   imageSrc: "assets/img/lola1.png",
-  //   name:"Lola Jiang",
-  //   text: "A seasoned product designer hailing from California-based, known for her expertise in crafting seamless user experiences. With a keen eye for detail, she specializes in delivering end-to-end UX/UI designs that captivate audiences.",
-  //   text2:"I'm California-based UX designer currently working at Google. Lola’s impressive resume includes having worked at YouTube as an interaction designer.",
-  //   uiux:"83%",
-  //   html:"93%",
-  //   css:"89%",
-  //   js:"70%",
-  //   imagesrc2:"assets/img/lola2.png",
-  //   link:"https://lolajiang.com/index.html",
-  // },
 ];
 
 // Document fragment to hold the sections
-const applicantSection = document.querySelector('.about');
+const applicantSection = document.querySelector('.about-section-here');
 
 const fragment = document.createDocumentFragment();
 
 // Loop through each applicant and generate HTML content for each
-applicants.forEach(applicant => {
+applicants.forEach((applicant, index) => {
   const section = document.createElement('section');
   section.classList.add('about', 'section');
   section.id = applicant.applicant;
+  if (index % 2 != 0) {
+    section.classList.add('even');
+  }
 
   // HTML content for the applicant
   section.innerHTML = `
@@ -155,6 +154,15 @@ applicants.forEach(applicant => {
 
               <div>
                   <img src="${applicant.imagesrc2}" alt="" class="skills__img">
+                  <br/>
+                  <p class="skills__text">${applicant.text3}</p>
+                
+              </div>
+
+              <div>
+              <img src="${applicant.imagesrc3}" alt="" class="skills__img">
+              <br/>
+ 
                   <div class="skills__data">
                       <div class="skills__names">
                           <a href="${applicant.link}" target="_blank" class="nav__link1">View ${applicant.name}'s full portfolio Website</a>
@@ -165,7 +173,7 @@ applicants.forEach(applicant => {
               <!-- Section 1 -->
               <section class="front-section dark-bg" data-name="${applicant.name}">
                   <!-- FRONT -->
-                  <h1>Rating</h1>
+                  <h1>Rating</h1>  
                   <section class="rating-numbers">
                       <input name="rating" class="radio-btn" value="1" type="radio" id="one" checked></input>
                       <label class="rating-number one default-active" for="one">1</label>
@@ -179,8 +187,8 @@ applicants.forEach(applicant => {
                       <label class="rating-number five" for="five">5</label>
                   </section>
                   <!-- Textarea for feedback -->
-                  <textarea name="" id="" cols="0" rows="6" class="contact__input" placeholder="Feedback"></textarea>
-                  <button class="btn">submit</button>
+                  <textarea name="" id="" cols="0" rows="6" class="contact__input" placeholder="Tell us more about your experience..."></textarea>
+                  <button class="btn">Submit</button>
               </section>
 
               <!-- Section 1 Result -->
@@ -366,3 +374,4 @@ function generateChart() {
     });
   }
 }
+

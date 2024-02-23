@@ -108,10 +108,14 @@ img {
   top: 2rem;
   background-color: var(--first-color);
 }
+.even{
+  background-color: mintcream;
+}
 
 .section {
-  padding-top: 3rem;
-  padding-bottom: 2rem;
+  padding-top: 2rem;
+  padding-bottom: 1rem;
+ 
 }
 
 /*===== LAYOUT =====*/
@@ -289,7 +293,7 @@ img {
 }
 
 .about__img img {
-  width: 200px;
+  width: 300px;
   border-radius: 0.5rem;
 }
 
@@ -394,7 +398,7 @@ img {
 /* ===== CONTACT =====*/
 .contact__input {
   margin: 0 auto;
-  width: 80%;
+  width: 95%;
   font-size: var(--normal-font-size);
   font-weight: var(--font-semi);
   /* padding: 1rem; */
@@ -444,6 +448,8 @@ img {
 }
 
 @media screen and (min-width: 576px) {
+
+
   .home {
     padding: 4rem 0 2rem;
   }
@@ -491,6 +497,10 @@ img {
   .contact__container {
     justify-items: center;
   }
+
+
+ 
+  
 }
 
 @media screen and (min-width: 768px) {
@@ -498,10 +508,17 @@ img {
     margin: 0;
   }
 
-  .section {
+  .section1 {
     padding-top: 4rem;
-    padding-bottom: 3rem;
+    padding-bottom: 10rem;
   }
+  .section {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+   
+  }
+  
 
   .section-title {
     margin-bottom: var(--mb-6);
@@ -585,7 +602,9 @@ img {
 
 
 .dark-bg {
-  background-color: var(--container-bg);
+  /* background-color: var(--container-bg); */
+  background-image: linear-gradient(to top right, #000000, hsl(216, 12%, 54%));
+
 }
 
 
@@ -596,19 +615,13 @@ img {
 }
 
 .front-section {
-  border-radius: 25px;
-  display: flex;
-  flex-direction: column;
-  gap: 1.95rem;
-  /* padding: 2rem 1.95rem; */
-  /* height: 40%; */
-  padding-bottom: 4rem;
-
-  margin: 2rem 0;
-  /* Use margin instead of padding */
-  box-sizing: border-box;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-
 .star-img {
   position: relative;
   background-color: var(--dark-blue);
@@ -622,7 +635,7 @@ img {
 }
 
 .front-section h1 {
-  text-align: center;
+  /* text-align: center; */
   color: var(--white);
   font-size: 1.8rem;
   font-weight: 400;
@@ -634,12 +647,9 @@ img {
   line-height: 1.5rem;
 }
 
-.rating-numbers {
-  display: flex;
-  flex-direction: row;
-  gap: 0.4rem;
-  justify-content: center;
-}
+
+
+
 
 /* RADIO BUTTON */
 .radio-btn {
@@ -653,7 +663,7 @@ img {
   padding: 1.1rem;
   background-color: var(--dark-blue);
   width: 1.1rem;
-  height: 1.1rem;
+  height: 1.1rem;  
   text-align: center;
   border: 1px solid transparent;
 }
@@ -676,12 +686,13 @@ img {
   text-transform: uppercase;
   border: none;
   border-radius: 25px;
-  width: 97%;
+  width: 96%;
   padding: 1rem;
   font-weight: 400;
   letter-spacing: 1.5px;
   font-size: 1rem;
   margin: auto;
+text-transform: lowercase !important;
 }
 
 /********** BACK ACTIVE **********/
@@ -755,5 +766,46 @@ img {
   .btn:hover {
     background-color: var(--white);
     color: var(--first-color);
+  }
+}
+
+
+
+/* .rating-numbers > input {
+  display: none;
+} */
+
+
+.rating-numbers {
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+}
+
+
+
+
+.rating-numbers > label {
+  display: flex;
+  flex-direction: row;
+  color: #ddd;
+  cursor: pointer;
+  justify-content: center;
+  text-align: center;
+}
+
+@media only screen and (max-width: 768px) {
+  .section1{
+    display: none;
+  }
+  .section11{
+    display: none;
+  }
+  .rating-numbers > label {
+    padding: 5px;
+    font-size: 15px;
   }
 }
